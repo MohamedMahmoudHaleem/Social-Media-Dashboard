@@ -206,8 +206,11 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
   gap: 1rem;
-
   place-content: center;
+  margin-bottom: 2rem;
+}
+.view-title{
+  margin-bottom: 1.6rem;
 }
 
 .view-card {
