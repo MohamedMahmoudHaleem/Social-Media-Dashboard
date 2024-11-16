@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%;
+  /* Primary color */
+  --primary-white: white;
+  --lime-green: hsl(163, 72%, 41%);
+  --bright-red: hsl(356, 69%, 56%);
+  --facebook: hsl(208, 92%, 53%);
+  --twitter: hsl(203, 89%, 53%);
+  --instagram: linear-gradient(to left, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  --youTube: hsl(348, 97%, 39%);
+  /* Dark Theme */
+  --bg-very-dark-blue: hsl(230, 17%, 14%);
+  --top-bg-very-dark-blue: hsl(232, 19%, 15%);
+  --card-bg-dark: hsl(228, 28%, 20%);
+  --card-heading-text-dark: hsl(228, 34%, 66%);
+  --toggle-dark: linear-gradient(
+    to right,
+    hsl(210, 78%, 56%),
+    hsl(146, 68%, 55%)
+  );
+  /* Light Theme */
+
+  --top-bg-light: hsl(225, 100%, 98%);
+  --card-bg-light: hsl(227, 47%, 96%);
+  --card-heading-text-light: hsl(228, 12%, 44%);
+  --toggle-light: hsl(230, 22%, 74%);
+}
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+  background: var(--primary-white);
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.top-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 35%;
+  background-color: var(--top-bg-light);
+  z-index: -1;
+}
+
+/* ----- Header ---- */
+.container {
+  /* width: 100%;
+  min-height: inherit; */
+  padding: 2rem 12rem;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .data {
+  color: var(--card-heading-text-light);
+}
+.toggler {
+  display: flex;
+  gap: 1rem;
+}
+.toggle-holder {
+  background-color: var(--toggle-dark);
+  width: 4rem;
+  height: 2rem;
+  border-radius: 2rem;
+  padding: 0.3rem;
+  display: flex;
+  text-align: center;
+}
+
+.btn {
+  appearance: none;
+  text-align: center;
+  width: 4rem;
+  height: inherit;
+  height: inherit;
+  position: relative;
+}
+.btn::after {
+  position: absolute;
+  content: "";
+  top: -0.4rem;
+  left: -0.4rem;
+  z-index: 1;
+  background-color: var(--toggle-light);
+  width: 4rem;
+  height: 2rem;
+  border-radius: 2rem;
+  padding: 0.1rem;
+  display: flex;
+  text-align: center;
+  transition: 1s ease-in-out;
+}
+.btn::before {
+  position: absolute;
+  content: "";
+  top: -0.3rem;
+  left: 1.6rem;
+  z-index: 2;
+  margin: 0.2rem;
+  background-color: white;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 100%;
+  border: 0px;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+.btn:checked::before {
+  transform: translateX(-1.9rem);
+  background-color: var(--card-bg-dark);
+}
+.btn:checked::after {
+  background: var(--toggle-dark);
+}
+.header .title {
+  font-weight: bolder;
+  color: var(--top-bg-very-dark-blue);
+}
+.header .data {
+  color: var(--card-heading-text-light);
+  font-weight: bold;
+}
+
+/* ------ Card ------ */
+.card-container {
+  width: 100%;
+  display: grid;
+  place-content: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  gap: 2rem;
+  /* grid-template-rows: 1fr; */
+  margin: 6rem 0rem;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.4rem;
+  padding: 5rem 2rem;
+  background-color: var(--card-bg-light);
+  justify-content: center;
+  align-items: center;
+  gap: 3.3rem;
+  border: 0.3rem solid;
+  border-color: transparent;
+}
+.social-account {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.social-account .icon {
+  transform: scale(1.3);
+}
+.social-account .account-name {
+  color: var(--card-heading-text-light);
+  font-weight: bold;
+}
+.follower-title {
+  letter-spacing: 0.8rem;
+  font-weight: 600;
+  color: var(--card-heading-text-light);
+}
+.follower {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.follower .counts {
+  font-size: 8rem;
+}
+.status {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.status .up-down {
+  width: 16px;
+  height: 8px;
+}
+.status .today-count {
+  color: var(--lime-green);
+  font-weight: bolder;
+}
+.view-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  gap: 1rem;
+
+  place-content: center;
+}
+
+.view-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.4rem;
+  background-color: var(--card-bg-light);
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.view-data {
+  width: inherit;
+  padding: 2rem 2.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.page-view {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
+.view-icons {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
