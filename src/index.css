@@ -209,14 +209,14 @@ body {
   place-content: center;
   margin-bottom: 2rem;
 }
-.view-title{
+.view-title {
   margin-bottom: 1.6rem;
 }
 
 .view-card {
   display: flex;
   flex-direction: column;
-  border-radius: 1.4rem;
+  border-radius: 0.7rem;
   background-color: var(--card-bg-light);
   justify-content: center;
   align-items: center;
@@ -225,19 +225,24 @@ body {
 .view-data {
   width: inherit;
   padding: 2rem 2.4rem;
+  gap: 7rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .page-view {
   display: flex;
-  gap: 2rem;
+  gap: 4rem;
   flex-direction: column;
 }
 .view-icons {
   display: flex;
-  gap: 2rem;
+  gap: 4rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.view-arrow-icon {
+  display: flex;
+  gap: 1rem;
 }
