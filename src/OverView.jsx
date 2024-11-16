@@ -1,5 +1,3 @@
-import FacebookIcon from "./assets/images/icon-facebook.svg";
-import UpIcon from "./assets/images/icon-up.svg";
 function OverView({ title, count, socialIcon, status, arrowIcon }) {
   return (
     <div className="view-container">
