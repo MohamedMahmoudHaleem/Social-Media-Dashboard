@@ -242,6 +242,11 @@ body {
   justify-content: center;
   align-items: center;
 }
+.view-title {
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  color: var(--card-heading-text-light);
+}
 .view-arrow-icon {
   display: flex;
   gap: 1rem;
@@ -301,10 +306,5 @@ body {
     width: 100%;
     margin: 0rem auto;
     gap: 0.1rem;
-  }
-  .view-title {
-    font-size: 2.5rem;
-    margin-bottom: 2.5rem;
-    color: var(--card-heading-text-light);
   }
 }
