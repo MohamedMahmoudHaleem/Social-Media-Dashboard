@@ -9,15 +9,16 @@ function Header() {
   return (
     <div className="header">
       <div className="info">
-        <h2 className="title">SociaI Media Dashboard</h2>
+        <h2 className="header-title">SociaI Media Dashboard</h2>
         <div className="toggler">
-          <p className="title">Dark Mode</p>
-          <div className="toggle-holder">
-            <input onClick={handleToggle} type="checkbox" className="btn" />
-          </div>
+          <p className="data">Total Followers : 23,004</p>
         </div>
       </div>
-      <p className="data">Total Followers : 23,004</p>
+      <div className="line"></div>
+      <div className="toggle-holder">
+        <p className="toggle-title">Dark Mode</p>
+        <input onClick={handleToggle} type="checkbox" className="btn" />
+      </div>
     </div>
   );
 }
