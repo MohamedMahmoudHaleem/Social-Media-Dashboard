@@ -1,4 +1,4 @@
-function OverView({ title, count, socialIcon, status, arrowIcon }) {
+function OverView({ title, count, socialIcon, status, arrowIcon, color }) {
   return (
     <div className="view-container">
       <div className="view-container-card">
@@ -14,7 +14,7 @@ function OverView({ title, count, socialIcon, status, arrowIcon }) {
               </div>
               <div className="view-arrow-icon">
                 <img src={arrowIcon} alt="" />
-                <span>{status}</span>
+                <span style={{ color: color }}>{status}</span>
               </div>
             </div>
           </div>

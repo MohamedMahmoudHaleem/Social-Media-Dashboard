@@ -7,6 +7,7 @@ import UpIcon from "./assets/images/icon-up.svg";
 import Card from "./Card.jsx";
 import Header from "./Header.jsx";
 import OverView from "./OverView.jsx";
+import { useState } from "react";
 const cardData = [
   {
     id: crypto.randomUUID(),
@@ -42,6 +43,7 @@ const cardData = [
     followers: "1987",
     status: 144,
     arrowIcon: DownIcon,
+    color: "hsl(356, 69%, 56%)",
     borderColor: "hsl(348, 97%, 39%)",
   },
 ];
@@ -52,6 +54,7 @@ const viewData = [
     count: 87,
     icon: FacebookIcon,
     arrowIcon: UpIcon,
+    color: "hsl(163, 72%, 41%)",
     status: "3%",
   },
   {
@@ -60,6 +63,7 @@ const viewData = [
     count: 87,
     icon: FacebookIcon,
     arrowIcon: UpIcon,
+    color: "hsl(163, 72%, 41%)",
     status: "3%",
   },
   {
@@ -67,7 +71,8 @@ const viewData = [
     id: crypto.randomUUID(),
     count: 87,
     icon: FacebookIcon,
-    arrowIcon: UpIcon,
+    arrowIcon: DownIcon,
+    color: "hsl(356, 69%, 56%)",
     status: "3%",
   },
   {
@@ -75,16 +80,22 @@ const viewData = [
     id: crypto.randomUUID(),
     count: 87,
     icon: FacebookIcon,
-    arrowIcon: UpIcon,
+    arrowIcon: DownIcon,
+    color: "hsl(356, 69%, 56%)",
     status: "3%",
   },
 ];
 
 export default function Container() {
+  const [toggle, setToggle] = useState(false);
+  console.log("🚀 ~ Header ~ toggle:", toggle);
+  function handleToggle() {
+    setToggle(!toggle);
+  }
   return (
-    <div className="container">
+    <div className="container" data-theme={toggle ? "dark" : ""}>
       <div className="top-bg"></div>
-      <Header />
+      <Header handleToggle={handleToggle} />
       <div className="card-container">
         {cardData.map((card) => (
           <Card
@@ -95,6 +106,7 @@ export default function Container() {
             status={card.status}
             arrowIcon={card.arrowIcon}
             borderColor={card.borderColor}
+            color={card.color}
           />
         ))}
       </div>
@@ -108,6 +120,7 @@ export default function Container() {
             socialIcon={view.icon}
             status={view.status}
             arrowIcon={view.arrowIcon}
+            color={view.color}
           />
         ))}
       </div>

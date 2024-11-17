@@ -6,14 +6,16 @@
 :root {
   font-size: 62.5%;
   /* Primary color */
-  --primary-white: white;
+  --background-bg: white;
   --lime-green: hsl(163, 72%, 41%);
   --bright-red: hsl(356, 69%, 56%);
   --facebook: hsl(208, 92%, 53%);
   --twitter: hsl(203, 89%, 53%);
   --instagram: linear-gradient(to left, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
   --youTube: hsl(348, 97%, 39%);
+
   /* Dark Theme */
+
   --bg-very-dark-blue: hsl(230, 17%, 14%);
   --top-bg-very-dark-blue: hsl(232, 19%, 15%);
   --card-bg-dark: hsl(228, 28%, 20%);
@@ -33,7 +35,6 @@
 body {
   font-family: "Inter", sans-serif;
   font-size: 1.4rem;
-  background: var(--primary-white);
 }
 
 #root {
@@ -54,11 +55,16 @@ body {
 /* ----- Header ---- */
 .container {
   padding: 2rem 12rem;
+  background-color: var(--background-bg);
 }
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.header-title {
+  line-height: 4rem;
+  color: var(--top-bg-very-dark-blue);
 }
 .info {
   display: flex;
@@ -83,7 +89,6 @@ body {
   padding: 0.3rem;
   gap: 1.5rem;
 }
-
 .btn {
   appearance: none;
   text-align: center;
@@ -187,6 +192,7 @@ body {
 }
 .follower .counts {
   font-size: 8rem;
+  color: var(--top-bg-very-dark-blue);
 }
 .status {
   display: flex;
@@ -209,31 +215,40 @@ body {
   place-content: center;
   margin-bottom: 2rem;
 }
+
 .view-title {
   margin-bottom: 1.6rem;
+  color: var(--top-bg-very-dark-blue);
 }
 
 .view-card {
-  display: flex;
-  flex-direction: column;
   border-radius: 0.7rem;
   background-color: var(--card-bg-light);
-  justify-content: center;
-  align-items: center;
   gap: 2rem;
 }
 .view-data {
   width: inherit;
-  padding: 2rem 2.4rem;
-  gap: 7rem;
+  padding: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.page-view-text {
+  font-weight: 500;
+  color: var(--card-heading-text-light);
 }
 .page-view {
   display: flex;
   gap: 4rem;
   flex-direction: column;
+}
+.page-view-count {
+  color: var(--top-bg-very-dark-blue);
+}
+.view-arrow-icon {
+  display: flex;
+  gap: 0.5rem;
+  font-weight: 600;
 }
 .view-icons {
   display: flex;
@@ -245,12 +260,8 @@ body {
 .view-title {
   font-size: 2.5rem;
   margin-bottom: 2.5rem;
-  color: var(--card-heading-text-light);
 }
-.view-arrow-icon {
-  display: flex;
-  gap: 1rem;
-}
+
 /* Responsive */
 @media (375px <=width<=750px) {
   .top-bg {
@@ -272,7 +283,7 @@ body {
     word-spacing: 0.2rem;
     font-weight: 700;
   }
-  .header .header-title {
+  .info .header-title {
     font-size: 2.9rem;
   }
   .line {
@@ -307,4 +318,14 @@ body {
     margin: 0rem auto;
     gap: 0.1rem;
   }
+}
+
+/* dark attr */
+[data-theme="dark"] {
+  --background-bg: hsl(230, 17%, 14%);
+  --top-bg-light: hsl(232, 19%, 15%);
+  --card-bg-light: hsl(228, 28%, 20%);
+  --card-heading-text-light: hsl(228, 34%, 66%);
+  --background-bg: hsl(230, 17%, 14%);
+  --top-bg-very-dark-blue: hsl(0, 0%, 100%);
 }

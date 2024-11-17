@@ -1,11 +1,7 @@
 import { useState } from "react";
 
-function Header() {
-  const [toggle, setToggle] = useState(false);
-  console.log("🚀 ~ Header ~ toggle:", toggle);
-  function handleToggle() {
-    setToggle(!toggle);
-  }
+function Header({handleToggle}) {
+ 
   return (
     <div className="header">
       <div className="info">

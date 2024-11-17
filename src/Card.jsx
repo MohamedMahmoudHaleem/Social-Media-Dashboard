@@ -5,6 +5,7 @@ export default function Card({
   status,
   arrowIcon,
   borderColor,
+  color,
 }) {
   return (
     <div className="card" style={{ borderTopColor: borderColor }}>
@@ -22,7 +23,9 @@ export default function Card({
         <div className="up-down">
           <img src={arrowIcon} alt="up" />
         </div>
-        <p className="today-count">{status} Today</p>
+        <p className="today-count" style={{ color: color }}>
+          {status} Today
+        </p>
       </div>
     </div>
   );
