@@ -11,7 +11,7 @@ export default function Card({
     <div className="card" style={{ borderTopColor: borderColor }}>
       <div className="social-account">
         <div className="icon">
-          <img src={socialIcon} alt="facebook" />
+          <img src={socialIcon} alt="social-icon" />
         </div>
         <p className="account-name">{name}</p>
       </div>

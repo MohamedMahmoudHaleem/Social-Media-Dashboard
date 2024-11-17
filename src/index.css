@@ -155,30 +155,30 @@ body {
 .card {
   display: flex;
   flex-direction: column;
-  border-radius: 1.4rem;
-  padding: 5rem 2rem;
+  border-radius: 0.6rem;
+  padding: 4rem 2rem;
   background-color: var(--card-bg);
   justify-content: center;
   align-items: center;
-  gap: 3.3rem;
+  gap:2.5rem;
   border: 0.5rem solid;
   border-color: transparent;
 }
 .social-account {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   justify-content: center;
   align-items: center;
 }
 .social-account .icon {
-  transform: scale(1.3);
+  transform: scale(1.2);
 }
 .social-account .account-name {
   color: var(--card-heading-text);
   font-weight: bold;
 }
 .follower-title {
-  letter-spacing: 0.8rem;
+  letter-spacing: 0.4rem;
   font-weight: 600;
   color: var(--card-heading-text);
 }
@@ -189,7 +189,7 @@ body {
   align-items: center;
 }
 .follower .counts {
-  font-size: 8rem;
+  font-size: 5rem;
   color: var(--top-bg-very-dark-blue);
 }
 .status {
@@ -198,10 +198,7 @@ body {
   justify-content: center;
   gap: 0.5rem;
 }
-.status .up-down {
-  width: 16px;
-  height: 8px;
-}
+
 .status .today-count {
   color: var(--lime-green);
   font-weight: bolder;
