@@ -27,14 +27,15 @@
   );
   /* Light Theme */
 
-  --top-bg-light: hsl(225, 100%, 98%);
-  --card-bg-light: hsl(227, 47%, 96%);
-  --card-heading-text-light: hsl(228, 12%, 44%);
+  --top-bg: hsl(225, 100%, 98%);
+  --card-bg: hsl(227, 47%, 96%);
+  --card-heading-text: hsl(228, 12%, 44%);
   --toggle-light: hsl(230, 22%, 74%);
 }
 body {
   font-family: "Inter", sans-serif;
   font-size: 1.4rem;
+  background-color: var(--background-bg);
 }
 
 #root {
@@ -56,6 +57,7 @@ body {
 .container {
   padding: 2rem 12rem;
   background-color: var(--background-bg);
+  height: 100vh;
 }
 .header {
   display: flex;
@@ -73,7 +75,7 @@ body {
   align-items: start;
 }
 .header .data {
-  color: var(--card-heading-text-light);
+  color: var(--card-heading-text);
 }
 .toggler {
   display: flex;
@@ -140,7 +142,7 @@ body {
   color: var(--top-bg-very-dark-blue);
 }
 .header .data {
-  color: var(--card-heading-text-light);
+  color: var(--card-heading-text);
   font-weight: bold;
 }
 
@@ -159,7 +161,7 @@ body {
   flex-direction: column;
   border-radius: 1.4rem;
   padding: 5rem 2rem;
-  background-color: var(--card-bg-light);
+  background-color: var(--card-bg);
   justify-content: center;
   align-items: center;
   gap: 3.3rem;
@@ -176,13 +178,13 @@ body {
   transform: scale(1.3);
 }
 .social-account .account-name {
-  color: var(--card-heading-text-light);
+  color: var(--card-heading-text);
   font-weight: bold;
 }
 .follower-title {
   letter-spacing: 0.8rem;
   font-weight: 600;
-  color: var(--card-heading-text-light);
+  color: var(--card-heading-text);
 }
 .follower {
   display: flex;
@@ -223,7 +225,7 @@ body {
 
 .view-card {
   border-radius: 0.7rem;
-  background-color: var(--card-bg-light);
+  background-color: var(--card-bg);
   gap: 2rem;
 }
 .view-data {
@@ -235,7 +237,7 @@ body {
 }
 .page-view-text {
   font-weight: 500;
-  color: var(--card-heading-text-light);
+  color: var(--card-heading-text);
 }
 .page-view {
   display: flex;
@@ -300,7 +302,7 @@ body {
     justify-content: space-between;
   }
   .toggle-title {
-    color: var(--card-heading-text-light);
+    color: var(--card-heading-text);
     font-weight: bolder;
   }
   .card-container {
@@ -323,9 +325,8 @@ body {
 /* dark attr */
 [data-theme="dark"] {
   --background-bg: hsl(230, 17%, 14%);
-  --top-bg-light: hsl(232, 19%, 15%);
-  --card-bg-light: hsl(228, 28%, 20%);
-  --card-heading-text-light: hsl(228, 34%, 66%);
-  --background-bg: hsl(230, 17%, 14%);
+  --top-bg: hsl(232, 19%, 15%);
+  --card-bg: hsl(228, 28%, 20%);
+  --card-heading-text: hsl(228, 34%, 66%);
   --top-bg-very-dark-blue: hsl(0, 0%, 100%);
 }
