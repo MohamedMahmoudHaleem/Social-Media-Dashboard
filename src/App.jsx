@@ -2,7 +2,7 @@ import Container from "./Container.jsx";
 
 function App() {
   return (
-    <div >
+    <div>
       <Container />
     </div>
   );

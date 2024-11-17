@@ -7,7 +7,8 @@ import UpIcon from "./assets/images/icon-up.svg";
 import Card from "./Card.jsx";
 import Header from "./Header.jsx";
 import OverView from "./OverView.jsx";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
 const cardData = [
   {
     id: crypto.randomUUID(),
@@ -92,6 +93,15 @@ export default function Container() {
   function handleToggle() {
     setToggle(!toggle);
   }
+  useEffect(() => {
+    document.body.style.backgroundColor = toggle
+      ? "hsl(230, 17%, 14%)"
+      : "white";
+
+    return () => {
+      document.body.style.backgroundColor = "white";
+    };
+  }, [toggle]);
   return (
     <div className="container" data-theme={toggle ? "dark" : ""}>
       <div className="top-bg"></div>

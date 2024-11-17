@@ -15,7 +15,6 @@
   --youTube: hsl(348, 97%, 39%);
 
   /* Dark Theme */
-
   --bg-very-dark-blue: hsl(230, 17%, 14%);
   --top-bg-very-dark-blue: hsl(232, 19%, 15%);
   --card-bg-dark: hsl(228, 28%, 20%);
@@ -26,7 +25,6 @@
     hsl(146, 68%, 55%)
   );
   /* Light Theme */
-
   --top-bg: hsl(225, 100%, 98%);
   --card-bg: hsl(227, 47%, 96%);
   --card-heading-text: hsl(228, 12%, 44%);
@@ -40,7 +38,6 @@ body {
 
 #root {
   width: 100%;
-  height: 100vh;
   position: relative;
 }
 .top-bg {
@@ -57,7 +54,6 @@ body {
 .container {
   padding: 2rem 12rem;
   background-color: var(--background-bg);
-  height: 100vh;
 }
 .header {
   display: flex;
